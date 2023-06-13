@@ -17,6 +17,9 @@ const onShowModal = () => {
     <h1 class="primary-title">{{ title }}</h1>
     <p>mouse: ({{ x }}, {{ y }})</p>
     <div>
+      <NuxtLink :to="{ name: 'demo' }"> to Demo </NuxtLink>
+    </div>
+    <div>
       <NuxtLink
         :to="{ name: 'product-lister-slug', params: { slug: 'iPhone' } }"
       >
