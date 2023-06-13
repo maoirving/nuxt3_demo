@@ -1,5 +1,8 @@
 {
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true // eslint: quick fix onSave
-  }
+  },
+  // ignore tailwind directives @apply, @tailwind, ...
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore"
 }

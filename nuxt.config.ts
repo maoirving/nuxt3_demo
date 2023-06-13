@@ -5,4 +5,5 @@ export default defineNuxtConfig({
     // docs: https://tailwindcss.nuxtjs.org
     '@nuxtjs/tailwindcss',
   ],
+  css: ['@/assets/sass/app.scss'],
 })
