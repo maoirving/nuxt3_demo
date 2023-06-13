@@ -1,10 +1,40 @@
 <script setup lang="ts">
-const route = useRoute()
+import BaseModal from '~~/components/base/Modal.vue'
+
+const { x, y } = useMouse()
+
+const title = ref('Home Page')
+const modalEl = ref<InstanceType<typeof BaseModal> | null>(null)
+
+const onShowModal = () => {
+  if (!modalEl.value) return
+  modalEl.value.showModal()
+}
 </script>
 
 <template>
   <div>
-    <h1>Nuxt Routing set up successfully!</h1>
-    <p>Current route: {{ route.path }}</p>
+    <h1 class="primary-title">{{ title }}</h1>
+    <p>mouse: ({{ x }}, {{ y }})</p>
+    <div>
+      <NuxtLink
+        :to="{ name: 'product-lister-slug', params: { slug: 'iPhone' } }"
+      >
+        to PLP
+      </NuxtLink>
+    </div>
+    <div>
+      <NuxtLink
+        :to="{ name: 'product-detail-slug', params: { slug: 'iPhone13' } }"
+      >
+        to PDP
+      </NuxtLink>
+    </div>
+    <div>
+      <BaseButton variant="primary" @click="onShowModal">
+        show Modal
+      </BaseButton>
+    </div>
+    <BaseModal ref="modalEl" />
   </div>
 </template>
