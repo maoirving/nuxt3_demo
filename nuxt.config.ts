@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
   css: ['@/assets/sass/app.scss'],
+  plugins: ['@/plugins/directives.ts'],
   pinia: {
     autoImports: [
       // automatically imports `defineStore`
