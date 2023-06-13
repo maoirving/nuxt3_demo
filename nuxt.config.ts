@@ -4,6 +4,8 @@ export default defineNuxtConfig({
   modules: [
     // docs: https://tailwindcss.nuxtjs.org
     '@nuxtjs/tailwindcss',
+    // docs: https://vueuse.org/guide/#nuxt
+    '@vueuse/nuxt',
   ],
   css: ['@/assets/sass/app.scss'],
 })
