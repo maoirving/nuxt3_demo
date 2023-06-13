@@ -2,6 +2,9 @@
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "types": ["@pinia/nuxt"]
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "noImplicitAny": false,
+    "types": ["node", "@pinia/nuxt"]
   }
 }
