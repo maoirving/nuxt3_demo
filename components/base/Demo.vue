@@ -1,6 +1,7 @@
 <template>
   <div>
     <p>base demo component</p>
+    <p>test</p>
     <p>{{ count }}</p>
   </div>
 </template>
